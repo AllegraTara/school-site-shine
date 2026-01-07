@@ -1,13 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Layout from "@/components/layout/Layout";
+import HeroSection from "@/components/home/HeroSection";
+import StatsSection from "@/components/home/StatsSection";
+import WelcomeSection from "@/components/home/WelcomeSection";
+import AcademicsSection from "@/components/home/AcademicsSection";
+import StudentLifeSection from "@/components/home/StudentLifeSection";
+import AdmissionsSection from "@/components/home/AdmissionsSection";
+import NewsSection from "@/components/home/NewsSection";
+import TestimonialsSection from "@/components/home/TestimonialsSection";
+import CTABanner from "@/components/shared/CTABanner";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <Layout>
+      <HeroSection />
+      <StatsSection />
+      <WelcomeSection />
+      <AcademicsSection />
+      <StudentLifeSection />
+      <AdmissionsSection />
+      <NewsSection />
+      <TestimonialsSection />
+      <CTABanner
+        title="Ready to become part of the Maranyundo family?"
+        subtitle="Take the first step toward an exceptional education that will shape your future."
+        primaryCTA={{ text: "Apply Now", href: "/admissions" }}
+        secondaryCTA={{ text: "Contact Admissions", href: "/contact" }}
+      />
+    </Layout>
   );
 };
 
